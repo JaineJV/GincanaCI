@@ -13,8 +13,8 @@
             echo $mensagem;
         }
         ?>
-        <table border="1">
-            <thead>
+        <table border="1" class="table">
+            <thead class="bg-success" style="color: white;">
                 <tr>
                     <th scope="col"> Nome </th>
                     <th scope="col"> Tempo </th>
@@ -32,9 +32,8 @@
                     echo '<td>' . $p->descricao . '</td>';
                     echo '<td>' . $p->nintegrantes . '</td>';
                     echo '<td>'
-                    . '<a href="' . $this->config->base_url() . '/index.php/Prova/alterar/' . $p->id . '"> Alterar </a>'
-                    . '/'
-                    . '<a href="' . $this->config->base_url() . '/index.php/Prova/deletar/' . $p->id . '"> Deletar </a></td>';
+                    . '<a href="' . $this->config->base_url() . '/index.php/Prova/alterar/' . $p->id . '" class="btn btn-warning"> Alterar </a>'
+                    . '<a href="' . $this->config->base_url() . '/index.php/Prova/deletar/' . $p->id . '" class="btn btn-outline-danger"> Deletar </a></td>';
 
                     echo '</tr>';
                 }
